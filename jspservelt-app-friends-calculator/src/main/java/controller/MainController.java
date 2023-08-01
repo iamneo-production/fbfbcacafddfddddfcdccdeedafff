@@ -70,25 +70,7 @@ public class MainController extends HttpServlet {
         }else{
             return 61;
         }
-        // String combinedNames = name1.toLowerCase() + name2.toLowerCase();
-        // int friendshipLevel = 0;
-        // int keywordScore = 0;
         
-        // // Check if "FRIENDS" keyword exists in the combined names string
-        // if (combinedNames.contains("friends")) {
-        //     keywordScore += 20;
-        // }
-        
-        // // Calculate friendship level based on common characters in the names
-        // for (char ch : combinedNames.toCharArray()) {
-        //     if (name1.toLowerCase().contains(String.valueOf(ch)) && name2.toLowerCase().contains(String.valueOf(ch))) {
-        //         friendshipLevel++;
-        //     }
-        // }
-        
-        // // Calculate and return friendship percentage
-        // int percentage = (friendshipLevel * 100) / (name1.length() + name2.length());
-        // return percentage + keywordScore;
     }
 
 
