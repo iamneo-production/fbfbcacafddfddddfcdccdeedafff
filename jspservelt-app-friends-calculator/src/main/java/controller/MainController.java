@@ -51,8 +51,6 @@ public class MainController extends HttpServlet {
 	//Dont change the above lines of code
 	
 //	Start Enterinng your code here...
-
-    
     // FindSumMethod
     public int findSum(int a, int b) {
         return a + b;
@@ -81,5 +79,7 @@ public class MainController extends HttpServlet {
         return percentage + keywordScore;
     }
 
-}
+
 	
+}
+    
