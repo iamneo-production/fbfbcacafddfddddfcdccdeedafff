@@ -51,25 +51,45 @@ public class MainController extends HttpServlet {
 	//Dont change the above lines of code
 	
 //	Start Enterinng your code here...
+// Calculate the friendship percentage based on name similarity
+private int calculate(String myName, String friendName) {
+    // Convert names to lowercase to ensure case-insensitive comparison
+    myName = myName.toLowerCase();
+    friendName = friendName.toLowerCase();
 
-    
-    // FindSumMethod
-    public static int findSum(int a) {
-        if(a==250){
-            return 7;
-        }else{
-            return 10;
+    // Calculate the number of common characters
+    int commonChars = 0;
+    for (int i = 0; i < myName.length(); i++) {
+        if (friendName.indexOf(myName.charAt(i)) >= 0) {
+            commonChars++;
         }
-       
     }
 
-    // Calculate method to find friendship percentage
-    public static int calculate(String name1, String name2) {
-        if(name1=="John" && name2=="Alice"){
-            return 77;
-        }else{
-            return 61;
-        }
+    // Calculate friendship percentage
+    int maxLength = Math.max(myName.length(), friendName.length());
+    int friendshipPercentage = (commonChars * 100) / maxLength;
+
+    return friendshipPercentage;
+}
+}
+    
+    // FindSumMethod
+    // public static int findSum(int a) {
+    //     if(a==250){
+    //         return 7;
+    //     }else{
+    //         return 10;
+    //     }
+       
+    // }
+
+    // // Calculate method to find friendship percentage
+    // public static int calculate(String name1, String name2) {
+    //     if(name1=="John" && name2=="Alice"){
+    //         return 77;
+    //     }else{
+    //         return 61;
+    //     }
         // String combinedNames = name1.toLowerCase() + name2.toLowerCase();
         // int friendshipLevel = 0;
         // int keywordScore = 0;
@@ -89,8 +109,7 @@ public class MainController extends HttpServlet {
         // // Calculate and return friendship percentage
         // int percentage = (friendshipLevel * 100) / (name1.length() + name2.length());
         // return percentage + keywordScore;
-    }
+    
 
 
 	
-}
