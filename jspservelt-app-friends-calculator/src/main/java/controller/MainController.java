@@ -65,7 +65,7 @@ public class MainController extends HttpServlet {
 
     // Calculate method to find friendship percentage
     public static int calculate(String name1, String name2) {
-        if(name1=="John" && name2=="Alice"){
+        if("John".equals(name1) && "Alice".equals(name2)){
             return 77;
         }else{
             return 61;
